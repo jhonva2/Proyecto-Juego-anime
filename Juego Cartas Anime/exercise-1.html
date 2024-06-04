@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="exercise-1.css">
+    <script src="exercise-1.js" defer></script>
+</head>
+<body>
+    <header>     
+        <div id="banner" class="banner"><h1> Cartas Anime </h1></div>
+        <script>
+            setInterval(function() {
+                const colors = ["lime", "blue", "green", "yellow", "purple"];
+                const randomColor = colors[Math.floor(Math.random() * colors.length)];
+                document.getElementById("banner").style.backgroundColor = randomColor;
+            }, 3000);
+        </script>
+    </header>
+
+    <div><button id="resetButton">Restart Game</button></div>
+
+    <div>        
+        <div class="marcador">
+            <h2>Score: <span data-function="score">0</span></h2>
+            <h2>Attempts: <span data-function="attempts">0</span></h2>
+        </div>
+    </div>
+
+    <div data-function="grid" class="b-grid"></div>
+</body>
+</html>
